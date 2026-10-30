@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EASE REAL ESTATE — A World Beyond the Address</title>
+<meta name="description" content="Extraordinary Properties. Extraordinary Lives.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<div id="loader" role="status"><span>EASE</span></div>
+
+<header id="nav">
+  <a href="#discover" class="logo">EASE <small>REAL ESTATE</small></a>
+  <nav id="menu" aria-label="Primary">
+    <a href="#discover">Discover</a><a href="#residences">Residences</a><a href="#destinations">Destinations</a><a href="#about">About</a><a href="#contact">Contact</a>
+  </nav>
+  <button id="sound" aria-pressed="false" aria-label="Toggle sound">Sound off</button>
+  <button id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i></i><i></i></button>
+</header>
+
+<main>
+<!-- Scenes 01–06: pinned cinematic journey -->
+<section id="discover" class="journey">
+  <div class="stage">
+    <video class="layer" data-i="0" data-src="assets/videos/opening-clouds.mp4" muted loop playsinline preload="auto" aria-hidden="true"></video>
+    <video class="layer" data-i="1" data-src="assets/videos/aircraft-sky.mp4" muted loop playsinline preload="none" aria-hidden="true"></video>
+    <video class="layer" data-i="2" data-src="assets/videos/destination-aerial.mp4" muted loop playsinline preload="none" aria-hidden="true"></video>
+    <video class="layer" data-i="3" data-src="assets/videos/estate-aerial.mp4" muted loop playsinline preload="none" aria-hidden="true"></video>
+    <div class="layer arrival" data-i="4" role="img" aria-label="Contemporary residence entrance with stone and glass"></div>
+    <video class="layer" data-i="5" data-src="assets/videos/interior-walkthrough.mp4" muted loop playsinline preload="none" aria-hidden="true"></video>
+    <video class="layer" data-i="6" data-src="assets/videos/infinity-pool.mp4" muted loop playsinline preload="none" aria-hidden="true"></video>
+    <canvas id="gl" aria-hidden="true"></canvas>
+    <div class="vignette"></div>
+
+    <div class="scene s0">
+      <h1><span>EASE</span><span>REAL ESTATE</span></h1>
+      <p class="tag">A World Beyond the Address.</p>
+      <p class="sub">Extraordinary Properties. Extraordinary Lives.</p>
+      <a href="#scroll-start" id="enter" class="btn">Enter Experience</a>
+    </div>
+    <div class="scene s1"><h2>Discover a different world.</h2><p>A destination is more than a location. It is a way of living.</p></div>
+    <div class="scene s2"><h2>Architecture that inspires.</h2><p>Exceptional spaces. Distinctive living.</p></div>
+    <div class="scene s3"><h2>Arrival.</h2><p>Natural stone, glass and warm light — the threshold to a different way of living.</p></div>
+    <div class="scene s4"><h2>A home beyond expectation.</h2><p>Designed around the art of living.</p>
+      <div class="stills"><img src="assets/images/living-room.webp" alt="Living room with marble feature wall and crystal chandelier" loading="lazy"><img src="assets/images/bedroom.webp" alt="Bedroom with oak panelling" loading="lazy"></div></div>
+    <div class="scene s5"><h2>More than a view.<br>A way of life.</h2></div>
+    <div class="scroll-cue" id="cue"><span>Scroll</span><i></i></div>
+    <div class="progress"><b id="bar"></b></div>
+  </div>
+</section>
+
+<!-- Scene 07 -->
+<section id="residences" class="pad">
+  <p class="eyebrow">The Collection</p>
+  <h2 class="big">Residences, curated.</h2>
+  <p class="note">Sample listings shown for presentation. Locations, prices and availability will be supplied with real property data.</p>
+  <div id="cards" class="cards"></div>
+</section>
+
+<!-- Scene 08 -->
+<section id="destinations" class="dest">
+  <video class="bgv" data-src="assets/videos/properties-showcase.mp4" muted loop playsinline preload="none" aria-hidden="true"></video>
+  <div class="dest-in pad">
+    <p class="eyebrow">Destinations</p>
+    <h2 class="big">Places that<br>change how you live.</h2>
+    <div class="dgrid">
+      <figure class="d1"><img src="assets/images/coastal-residence.webp" alt="Waterfront residence at dusk" loading="lazy"><figcaption><b>Coastlines &amp; Waterfronts</b><span>Living at the edge of the water.</span></figcaption></figure>
+      <figure class="d2"><img src="assets/images/mountain-residence.webp" alt="Aerial view of estates below mountains" loading="lazy"><figcaption><b>Mountains &amp; Valleys</b><span>Space, silence and long horizons.</span></figcaption></figure>
+      <figure class="d3"><img src="assets/images/city-penthouse.webp" alt="Rooftop infinity pool at sunset" loading="lazy"><figcaption><b>Skyline Terraces</b><span>The city, seen from above.</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- Scene 09 -->
+<section id="about" class="pad about">
+  <p class="eyebrow">About EASE REAL ESTATE</p>
+  <p class="lede">At EASE REAL ESTATE, we believe exceptional properties are more than addresses. They are expressions of architecture, lifestyle and individuality.</p>
+  <p class="lede dim">Our vision is to connect people with extraordinary spaces and distinctive places.</p>
+</section>
+
+<!-- Scene 10 -->
+<section id="contact" class="pad contact">
+  <div>
+    <p class="eyebrow">Consultation</p>
+    <h2 class="big">Your next address<br>starts here.</h2>
+    <p class="note">Discover a place that feels like yours.</p>
+  </div>
+  <form id="form" novalidate>
+    <label>Full name<input name="name" autocomplete="name" required><em></em></label>
+    <label>Email<input name="email" type="email" autocomplete="email" required><em></em></label>
+    <label>Phone number<input name="phone" type="tel" autocomplete="tel" required><em></em></label>
+    <label>Preferred destination<select name="destination" required><option value="">Select…</option><option>Coastlines &amp; Waterfronts</option><option>Mountains &amp; Valleys</option><option>Skyline Terraces</option><option>Garden Retreats</option><option>Not sure yet</option></select><em></em></label>
+    <label class="full">Property type<select name="type" required><option value="">Select…</option><option>Coastal Residence</option><option>Mountain Estate</option><option>City Penthouse</option><option>Garden Villa</option></select><em></em></label>
+    <label class="full">Message<textarea name="message" rows="4" required minlength="10"></textarea><em></em></label>
+    <button class="btn full" type="submit">Request a consultation</button>
+    <p id="status" class="full" role="status" aria-live="polite"></p>
+  </form>
+</section>
+</main>
+
+<footer>
+  <b>EASE REAL ESTATE</b>
+  <nav aria-label="Footer"><a href="#discover">Discover</a><a href="#residences">Residences</a><a href="#destinations">Destinations</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+  <small>© <span id="yr"></span> EASE REAL ESTATE. Sample content for presentation.</small>
+</footer>
+
+<dialog id="modal" aria-labelledby="m-title">
+  <button class="close" aria-label="Close">×</button>
+  <img id="m-img" alt="">
+  <div class="m-body"><p class="eyebrow" id="m-cat"></p><h3 id="m-title"></h3><p id="m-loc" class="loc"></p><p id="m-desc"></p><p class="note">Sample listing — details to be confirmed with real property data.</p><button class="btn" id="m-enq">Enquire about this residence</button></div>
+</dialog>
+
+<script src="js/vendor/gsap.min.js"></script>
+<script src="js/vendor/ScrollTrigger.min.js"></script>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
